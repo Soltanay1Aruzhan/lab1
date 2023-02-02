@@ -1,0 +1,9 @@
+print('Nurzhan')
+
+
+c = int(input())
+e = int(input())
+if c > e:
+    print('Меншее число с = ' + str(с))
+else:
+    print('Меньшее число е= ' + str(е))
