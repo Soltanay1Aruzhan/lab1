@@ -1,9 +1,7 @@
-print('Nurzhan')
+A = int(input("A: "))
+B = int(input("B: "))
+while B<=A:
+    print(B)
+    B+=1
 
 
-c = int(input())
-e = int(input())
-if c > e:
-    print('Меншее число с = ' + str(с))
-else:
-    print('Меньшее число е= ' + str(е))
