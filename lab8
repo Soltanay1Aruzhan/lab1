@@ -1,0 +1,35 @@
+# Считываем число элементов в словаре
+n = int(input())
+
+# Создаем пустой словарь
+countries_and_rivers = {}
+
+# Считываем страны и реки и добавляем их в словарь
+for i in range(n):
+    country, *rivers = input().split()
+    countries_and_rivers[country] = rivers
+
+# Считываем название реки
+river_name = input()
+
+# Переменная, в которой будет храниться страна, в которой протекает река
+river_country = None
+
+# Ищем название реки в словаре и выводим страну, если река найдена
+for country, rivers in countries_and_rivers.items():
+    if river_name in rivers:
+        river_country = country
+        print(f"{river_name} протекает в {country}")
+        break
+
+# Если название реки не найдено, выводим сообщение об этом
+if river_country is None:
+    print(f"Река {river_name} не найдена")
+
+# Считываем новую страну и реку и добавляем их в словарь
+new_country, new_river = input().split()
+countries_and_rivers[new_country] = [new_river]
+
+# Выводим обновленный словарь
+print(countries_and_rivers)
+
