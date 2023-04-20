@@ -1,0 +1,16 @@
+ 4--------------------
+def calculate_delivery_cost(street_name, order_price):
+    """Рассчитывает стоимость доставки заказа в зависимости от улицы и стоимости товара"""
+    if street_name == "квадрат Аль-Фараби-Саина-Ташентского-Достык":
+        if order_price < 10000:
+            return 500
+        else:
+            return 0
+    else:
+        if order_price < 10000:
+            return 1000
+        else:
+            return order_price * 0.1
+
+delivery_cost = calculate_delivery_cost("ул. Абая", 15000)
+print(delivery_cost)
